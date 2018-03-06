@@ -37,10 +37,13 @@
 ul {
 list-style: none;
     padding-left: 0;
+    margin-left: 1em;
 }
 
 li {
     font-size: 1.4em;
+    margin-bottom: .5em;
+    
 }
 
 #services:last-child {
@@ -334,5 +337,9 @@ td {
     .container-narrow {
         width: 90%;
         max-width: 1140px;
+    }
+    .narrow {
+        width: 90%;
+        max-width: 960px;
     }
 }
