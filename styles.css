@@ -18,6 +18,7 @@
 
 #hero a {
     margin-top: 2em;
+    
 }
 
 .col-sm-8 p {
@@ -266,7 +267,8 @@ td {
   text-align:center;
   border-radius:50%;
   box-shadow:0 0 0 1px rgba(255,255,255,0.4);
-  margin:0 8px;
+  margin-left:0;
+  margin-right: 8px;    
   color:#fff;
   opacity:0.75;
 }
@@ -311,7 +313,6 @@ td {
     .row-pricing{
     display: flex;
     flex-wrap: wrap;
-        
   }
   
     #about {
@@ -319,7 +320,10 @@ td {
     }
     
     #hero {
-        height: 80vh;
+        height: 60vh;
+        max-height: 800px;
+        padding-bottom: 0;
+        padding-top: 7em;
     }
     
     .jumbotron {
@@ -342,4 +346,14 @@ td {
         width: 90%;
         max-width: 960px;
     }
+}
+
+
+
+i {
+    
+}
+
+#brand-div {
+    padding: 1em;
 }
