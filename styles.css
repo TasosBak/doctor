@@ -16,6 +16,15 @@
         font-size: 2em;
     }
 
+#hero {
+        background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("bg.jpg");
+        height:80vh;
+        background-position:center;
+        background-size:cover;
+        background-repeat:no-repeat;
+        min-height:560px;
+    }
+
 #hero a {
     margin-top: 2em;
     
@@ -319,13 +328,6 @@ td {
         background: #eaeaea;
     }
     
-    #hero {
-        height: 60vh;
-        max-height: 800px;
-        padding-bottom: 0;
-        padding-top: 7em;
-    }
-    
     .jumbotron {
       background-color: #f4511e;
       color: #fff;
@@ -356,4 +358,18 @@ i {
 
 #brand-div {
     padding: 1em;
+}
+
+#hero-with-bg {
+	background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("bg.jpg");
+	height:80vh;
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	min-height:560px;"
+}
+
+#hero-div {
+  text-align:center;
+  margin-top:10em;
 }
