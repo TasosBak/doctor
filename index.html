@@ -331,6 +331,13 @@
         });
       });
     
+    //$("#arrow-to-top").click(function(event) {
+    $("footer a, navbar-brand").click(function(event) {
+          $('.navbar').css('transform', 'translateY(0px)');
+        console.log("footer a clicked");
+        });
+
+    
     $('.nav a').on('click', function(){   
    // $('.navbar').hide();
     $('.navbar').css('transform', 'translateY(-57px)');
@@ -367,7 +374,7 @@ $(document).ready(function(){
       var pos = $(this).offset().top;
 
       var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
+        if (pos < winTop + 900) {
           $(this).addClass("slide");
         }
     });
