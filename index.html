@@ -19,42 +19,41 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<<<<<<< HEAD
 <section id="hero">
     
-<nav class="navbar navbar-default navbar-fixed">
-=======
-<nav class="navbar navbar-default navbar-fixed-top">
->>>>>>> 0e654d462c3d0e2f2ab4a1a1faed9787a37bc2fb
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage">Γεράκης Ιωάννης</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">Βιογραφικό</a></li>
-        <li><a href="#services">Υπηρεσίες</a></li>
-        <li><a href="#pricing">Ιατρεία</a></li>
-        <li><a href="#contact">Επικοινωνία</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+	<nav class="navbar navbar-fixed-top navbar-default" id="navbar-top">
+        <div class="container-fluid content">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="#myPage">Γεράκης Ιωάννης</a>
+            </div>            
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">Βιογραφικό</a></li>
+                    <li><a href="#services">Υπηρεσίες</a></li>
+                    <li><a href="#pricing">Ιατρεία</a></li>
+                    <li><a href="#contact">Επικοινωνία</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+	
     <div id="hero-div">
-        <h1>Γαστρεντερολόγος - Ηπατολόγος</h1> 
-		<p>Ιατρεία στα Διαβατά και στο Κέντρο Θεσσαλονίκης</p> 
-		<a class="btn btn-primary" href="#contact">Πώς θα μας βρείτε:</a>
+        <h2 style="color:rgb(255,255,255);">Γαστρεντερολόγος - Ηπατολόγος</h2>
+        <p style="color:rgb(255,255,255);">Ιατρεία στα Διαβατά και στο Κέντρο Θεσσαλονίκης</p>
+		<a class="btn btn-primary" href="#contact" >Πώς θα μας βρείτε:</a>
 	</div>
 </section>
 
 
 <!-- Container (About Section) -->
-<div id="about" class="container-fluid container-narrow content-narrow">
+<div id="about" class="container-fluid container-narrow content-narrow section">
  <h2>Σύντομο Βιογραφικό</h2>
   <div class="row">
     <div class="col-sm-8">
@@ -182,11 +181,7 @@
   </div>
 </div>
 
-
-
-
-
-
+<br>
 
 <div id="contact" class="container-fluid container-narrow">
   <div class="text-center">
@@ -336,8 +331,15 @@
         });
       });
     
+    $('.nav a').on('click', function(){   
+   // $('.navbar').hide();
+    $('.navbar').css('transform', 'translateY(-57px)');
+        console.log("clicked");
+    });
     
+  
 $(document).ready(function(){
+/*
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
@@ -359,7 +361,7 @@ $(document).ready(function(){
       });
     } // End if
   });
-  
+  */
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
@@ -371,7 +373,39 @@ $(document).ready(function(){
     });
   });
 })
+    
+    $(document).ready(function () {
+  
+  'use strict';
+  
+   var c, currentScrollTop = 0,
+       navbar = $('.navbar');
+
+   $(window).scroll(function () {
+      var a = $(window).scrollTop();
+      var b = navbar.height();
+     
+      currentScrollTop = a;
+     
+      if (c < currentScrollTop && a > b + b) {
+     //   navbar.addClass("scrollUp");
+          navbar.css('transform', 'translateY(-57px)');
+          console.log("scrollUp");
+      } else if (c > currentScrollTop && !(a <= b)) {
+        navbar.css('transform', 'translateY(0px)');
+          console.log("Remove scrollUp");
+      }
+      c = currentScrollTop;
+  });
+  
+});
+
 </script>
+
+
+
+
 
 </body>
 </html>
+
