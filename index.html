@@ -259,8 +259,12 @@
 <!-- Add Google Maps -->
 
 <footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
+  <a href="#myPage" class=”back-to-top” title="To Top">
+   <!--
     <span class="glyphicon glyphicon-chevron-up"></span>
+    -->
+    <span class="icon ion-android-arrow-up"></span>
+    
   </a>
   
 </footer>
@@ -397,10 +401,8 @@ $(document).ready(function(){
       if (c < currentScrollTop && a > b + b) {
      //   navbar.addClass("scrollUp");
           navbar.css('transform', 'translateY(-57px)');
-          console.log("scrollUp");
       } else if (c > currentScrollTop && !(a <= b)) {
         navbar.css('transform', 'translateY(0px)');
-          console.log("Remove scrollUp");
       }
       c = currentScrollTop;
   });
@@ -410,8 +412,37 @@ $(document).ready(function(){
 </script>
 
 
+<script> 
+	jQuery(document).ready(function() {
 
+		var offset = 250;
+		var duration = 900;
 
+		jQuery(window).scroll(
+		
+			function() {
+				if (jQuery(this).scrollTop() > offset) {
+					jQuery('.back-to-top').fadeIn(duration);
+					console.log("fadeIn");
+					//jQuery('.back-to-top').css('transform', 'translateY(-100px)');
+				} 
+				else {
+					jQuery('.back-to-top').fadeOut(duration);
+					console.log("fadeOut");
+					//jQuery('.back-to-top').css('transform', 'translateY(100px)');
+				}
+			});
+//jQuery('.back-to-top').click(
+
+		$(".back-to-top").click(
+			function(event) {
+				event.preventDefault();
+				jQuery('html, body').animate({scrollTop: 0}, duration);
+				console.log("scrollTop");
+				return false;
+		})
+	});
+</script>
 
 </body>
 </html>

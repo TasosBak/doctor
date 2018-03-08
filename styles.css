@@ -289,7 +289,8 @@ td {
     color: #fff;
 }
 
-.footer-dark .icon {
+.footer-dark .icon,
+footer>a>span {
   font-size:20px;
   width:36px;
   height:36px;
@@ -302,6 +303,23 @@ td {
   margin-right: 8px;    
   color:#fff;
   opacity:0.75;
+}
+
+footer>a>span {
+    color: #eaeaea;
+    background-color: #f4511e;
+    width: 60px;
+    height: 60px;
+    line-height:60px;
+    font-size:40px;
+    box-shadow: none;
+     
+    position: fixed;
+    bottom: 5%;
+    right: 4%;
+    margin: 0;
+    z-index: 100;
+    opacity:0.9;
 }
 
 
